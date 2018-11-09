@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.example.ajc254.weatherapp.HomeActivity">
+
+    <fragment
+        android:id="@+id/fragment_today"
+        android:name="com.example.ajc254.weatherapp.fragments.TodayFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_forecast1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/change_city_button"
+        tools:layout="@layout/fragment_today" />
+
+    <fragment
+        android:id="@+id/fragment_forecast1"
+        android:name="com.example.ajc254.weatherapp.fragments.Forecast1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_forecast2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_forecast1" />
+
+
+    <fragment
+        android:id="@+id/fragment_forecast2"
+        android:name="com.example.ajc254.weatherapp.fragments.Forecast2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_forecast3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_forecast1" />
+
+    <fragment
+        android:id="@+id/fragment_forecast3"
+        android:name="com.example.ajc254.weatherapp.fragments.Forecast3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_forecast4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_forecast1" />
+
+    <fragment
+        android:id="@+id/fragment_forecast4"
+        android:name="com.example.ajc254.weatherapp.fragments.Forecast4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_forecast1" />
+
+    <Button
+        android:id="@+id/change_city_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:elevation="0dp"
+        android:text="@string/change_city"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/change_city" />
+
+    <TextView
+        android:id="@+id/last_updated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/change_city_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/update_button"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:background="@android:drawable/ic_menu_rotate"
+        android:contentDescription="@string/refreshButtonDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_updated" />
+
+
+    <!--
+    <menu
+        android:layout_width="53dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context="com.example.ajc254.weatherapp.HomeActivity">
+
+        <item
+            android:id="@+id/change_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orderInCategory="1"
+            android:title="@string/change_city" />
+
+    </menu>
+    -->
+
+</android.support.constraint.ConstraintLayout>
